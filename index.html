@@ -4,9 +4,9 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="./assets/normalize.css" />
+        <link rel="stylesheet" href="./assets/styles/normalize.css" />
         <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
-        <link rel="stylesheet" href="./assets/style.css" />
+        <link rel="stylesheet" href="./assets/styles/style.css" />
         <title>Medic</title>
     </head>
     <body>
@@ -21,157 +21,330 @@
                         <img src="./assets/img/logo.svg" alt="" />
                     </a>
                     <a href="tel:+" class="header__tel">
-                        <img src="./assets/img/tel.svg" alt="" />
+                        <div class="header__tel-icon"></div>
                         +7 916 073-32-23
                     </a>
                 </div>
             </div>
         </header>
-        <div class="intro">
-            <div class="container">
-                <div class="intro__title">
-                    Медицина <br />
-                    <span>нового поколения —</span> <br />
-                    за здравый смысл!
+        <main>
+            <div class="intro">
+                <div class="container">
+                    <div class="intro__title">
+                        Медицина <br />
+                        <span>нового поколения —</span> <br />
+                        за здравый смысл!
+                    </div>
+                    <div class="intro__subtitle">Мы обучаем врачей новым технологиям лечения</div>
                 </div>
-                <div class="intro__subtitle">Мы обучаем врачей новым технологиям лечения</div>
-            </div>
-            <div class="intro__slider swiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="./assets/img/slide.png" alt="" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="./assets/img/slide.png" alt="" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="./assets/img/slide.png" alt="" />
-                    </div>
-                </div>
-            </div>
-            <div class="intro__bottom container">
-                <div class="swiper-pagination intro__pagination"></div>
-                <div class="intro__line"></div>
-                <img src="./assets/img/round.png" alt="" class="intro__round" />
-            </div>
-        </div>
-        <div class="wedo">
-            <div class="container">
-                <div class="wedo__inner">
-                    <div class="wedo__title">Чем мы занимаемся</div>
-                    <div class="wedo__box">
-                        <div class="wedo__item">
-                            <div class="wedo__name">Созданием</div>
-                            <div class="wedo__desc">
-                                Правовой базы для медработников и внедрения неформального подхода к
-                                сложным заболеваниям
-                            </div>
-                            <div class="wedo__num">1</div>
-                        </div>
-                        <div class="wedo__item">
-                            <div class="wedo__name">Обучением</div>
-                            <div class="wedo__desc">
-                                Врачей лечебных специальностей современным способам диагностики и
-                                лечения болевых синдромов
-                            </div>
-                            <div class="wedo__num">2</div>
-                        </div>
-                        <div class="wedo__item">
-                            <div class="wedo__name">Организацией</div>
-                            <div class="wedo__desc">
-                                Медицинских дискуссионных клубов для оптимизации помощи больным на
-                                стыке специальностей
-                            </div>
-                            <div class="wedo__num">3</div>
-                        </div>
-                        <div class="wedo__item">
-                            <div class="wedo__name">Разработкой</div>
-                            <div class="wedo__desc">
-                                Оборудования для совершенствования интервенционных навыков и
-                                эффективности локальной инъекционной терапии
-                            </div>
-                            <div class="wedo__num">4</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="about">
-            <div class="container">
-                <div class="about__inner">
-                    <div class="about__info">
-                        <div class="about__title">О Союзе</div>
-                        <div class="about__name">Алексей Николаевич Баринов</div>
-                        <div class="about__desc">
-                            Создатель доцент кафедры нервных болезней, кандидат медицинских наук.
-                            <br />
-                            <br />
-                            Союз ассоциаций создан в 2020 году по инициативе организаций, которые
-                            выступают против некомпетентных врачей, врачей-мошенников, шарлатанских
-                            методик лечения и фанатичного использования доказательной медицины.
-                        </div>
-                    </div>
-                    <img src="./assets/img/about.png" alt="" class="about__img" />
-                </div>
-            </div>
-        </div>
-        <div class="clients">
-            <div class="container">
-                <div class="clients__title">Для кого</div>
-                <div class="clients__items">
-                    <div class="clients__item">
-                        <img src="./assets/img/client-1.svg" alt="" />
-                        <div class="clients__name">Врачи</div>
-                    </div>
-                    <div class="clients__item">
-                        <img src="./assets/img/client-2.svg" alt="" />
-                        <div class="clients__name">Ординаторы</div>
-                    </div>
-                    <div class="clients__item">
-                        <img src="./assets/img/client-3.svg" alt="" />
-                        <div class="clients__name">Аспиранты</div>
-                    </div>
-                    <div class="clients__item">
-                        <img src="./assets/img/client-4.svg" alt="" />
-                        <div class="clients__name">Студенты</div>
-                    </div>
-                    <div class="clients__item">
-                        <img src="./assets/img/client-5.svg" alt="" />
-                        <div class="clients__name">Массажисты</div>
-                    </div>
-                </div>
-                <button class="clients__btn">Заказать</button>
-            </div>
-        </div>
-        <div class="gallery">
-            <div class="swiper-button-prev gallery__prev"></div>
-            <div class="swiper-button-next gallery__next"></div>
-            <div class="container">
-                <div class="gallery__slider swiper">
+                <div class="intro__slider swiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <img src="./assets/img/gallery-1.png" alt="" />
+                            <img src="./assets/img/slide.png" alt="" />
                         </div>
                         <div class="swiper-slide">
-                            <img src="./assets/img/gallery-2.png" alt="" />
+                            <img src="./assets/img/slide.png" alt="" />
                         </div>
                         <div class="swiper-slide">
-                            <img src="./assets/img/gallery-1.png" alt="" />
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="./assets/img/gallery-2.png" alt="" />
+                            <img src="./assets/img/slide.png" alt="" />
                         </div>
                     </div>
-                    <div class="swiper-pagination gallery__pagination"></div>
+                </div>
+                <div class="intro__bottom container">
+                    <div class="swiper-pagination intro__pagination"></div>
+                    <div class="intro__line"></div>
+                    <img src="./assets/img/round.png" alt="" class="intro__round" />
                 </div>
             </div>
-        </div>
-		<div class="calendar">
-			<div class="container">
-				<div class="calendar__title">Календарь мероприятий</div>
-				<div class="calendar__inner"></div>
-			</div>
-		</div>
+            <div class="wedo">
+                <div class="container">
+                    <div class="wedo__inner">
+                        <div class="wedo__title">Чем мы занимаемся</div>
+                        <div class="wedo__box">
+                            <div class="wedo__item">
+                                <div class="wedo__name">Созданием</div>
+                                <div class="wedo__desc">
+                                    Правовой базы для медработников и внедрения неформального
+                                    подхода к сложным заболеваниям
+                                </div>
+                                <div class="wedo__num">1</div>
+                            </div>
+                            <div class="wedo__item">
+                                <div class="wedo__name">Обучением</div>
+                                <div class="wedo__desc">
+                                    Врачей лечебных специальностей современным способам диагностики
+                                    и лечения болевых синдромов
+                                </div>
+                                <div class="wedo__num">2</div>
+                            </div>
+                            <div class="wedo__item">
+                                <div class="wedo__name">Организацией</div>
+                                <div class="wedo__desc">
+                                    Медицинских дискуссионных клубов для оптимизации помощи больным
+                                    на стыке специальностей
+                                </div>
+                                <div class="wedo__num">3</div>
+                            </div>
+                            <div class="wedo__item">
+                                <div class="wedo__name">Разработкой</div>
+                                <div class="wedo__desc">
+                                    Оборудования для совершенствования интервенционных навыков и
+                                    эффективности локальной инъекционной терапии
+                                </div>
+                                <div class="wedo__num">4</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="about">
+                <img src="./assets/img/logo-2.svg" alt="" class="about__logo" />
+                <div class="container">
+                    <div class="about__inner">
+                        <div class="about__info">
+                            <div class="about__title">О Союзе</div>
+                            <div class="about__name">Алексей Николаевич Баринов</div>
+                            <div class="about__desc">
+                                Создатель доцент кафедры нервных болезней, кандидат медицинских
+                                наук.
+                                <br />
+                                <br />
+                                Союз ассоциаций создан в 2020 году по инициативе организаций,
+                                которые выступают против некомпетентных врачей, врачей-мошенников,
+                                шарлатанских методик лечения и фанатичного использования
+                                доказательной медицины.
+                            </div>
+                        </div>
+                        <img src="./assets/img/about.png" alt="" class="about__img" />
+                    </div>
+                </div>
+            </div>
+            <div class="clients">
+                <div class="container">
+                    <div class="clients__title">Для кого</div>
+                    <div class="clients__items">
+                        <div class="clients__item">
+                            <img src="./assets/img/client-1.svg" alt="" />
+                            <div class="clients__name">Врачи</div>
+                        </div>
+                        <div class="clients__item">
+                            <img src="./assets/img/client-2.svg" alt="" />
+                            <div class="clients__name">Ординаторы</div>
+                        </div>
+                        <div class="clients__item">
+                            <img src="./assets/img/client-3.svg" alt="" />
+                            <div class="clients__name">Аспиранты</div>
+                        </div>
+                        <div class="clients__item">
+                            <img src="./assets/img/client-4.svg" alt="" />
+                            <div class="clients__name">Студенты</div>
+                        </div>
+                        <div class="clients__item">
+                            <img src="./assets/img/client-5.svg" alt="" />
+                            <div class="clients__name">Массажисты</div>
+                        </div>
+                    </div>
+                    <button class="clients__btn">Заказать</button>
+                </div>
+            </div>
+            <div class="gallery">
+                <div class="swiper-button-prev gallery__prev"></div>
+                <div class="swiper-button-next gallery__next"></div>
+                <div class="container">
+                    <div class="gallery__slider swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="./assets/img/gallery-1.png" alt="" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./assets/img/gallery-2.png" alt="" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./assets/img/gallery-1.png" alt="" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./assets/img/gallery-2.png" alt="" />
+                            </div>
+                        </div>
+                        <div class="swiper-pagination gallery__pagination"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="calendar">
+                <div class="container">
+                    <div class="calendar__title">Календарь мероприятий</div>
+                    <div class="calendar__inner">
+                        <div class="event">
+                            <div class="event__top">
+                                <div class="event__row">
+                                    <img src="./assets/img/calendar.svg" alt="" />
+                                    4 ноября, 17:00-19:00
+                                </div>
+                                <div class="event__row">
+                                    <img src="./assets/img/location.svg" alt="" />
+                                    онлайн
+                                </div>
+                            </div>
+                            <div class="event__desc">
+                                дискуссионный клуб на канале АИМ «Боль в стопе»
+                            </div>
+                        </div>
+                        <div class="event">
+                            <div class="event__top">
+                                <div class="event__row">
+                                    <img src="./assets/img/calendar.svg" alt="" />
+                                    4 ноября, 17:00-19:00
+                                </div>
+                                <div class="event__row">
+                                    <img src="./assets/img/location.svg" alt="" />
+                                    онлайн
+                                </div>
+                            </div>
+                            <div class="event__desc">
+                                дискуссионный клуб на канале АИМ «Боль в стопе»
+                            </div>
+                        </div>
+                        <div class="event">
+                            <div class="event__top">
+                                <div class="event__row">
+                                    <img src="./assets/img/calendar.svg" alt="" />
+                                    4 ноября, 17:00-19:00
+                                </div>
+                                <div class="event__row">
+                                    <img src="./assets/img/location.svg" alt="" />
+                                    онлайн
+                                </div>
+                            </div>
+                            <div class="event__desc">
+                                дискуссионный клуб на канале АИМ «Боль в стопе»
+                            </div>
+                        </div>
+                        <div class="event">
+                            <div class="event__top">
+                                <div class="event__row">
+                                    <img src="./assets/img/calendar.svg" alt="" />
+                                    4 ноября, 17:00-19:00
+                                </div>
+                                <div class="event__row">
+                                    <img src="./assets/img/location.svg" alt="" />
+                                    онлайн
+                                </div>
+                            </div>
+                            <div class="event__desc">
+                                дискуссионный клуб на канале АИМ «Боль в стопе»
+                            </div>
+                        </div>
+                        <div class="event">
+                            <div class="event__top">
+                                <div class="event__row">
+                                    <img src="./assets/img/calendar.svg" alt="" />
+                                    4 ноября, 17:00-19:00
+                                </div>
+                                <div class="event__row">
+                                    <img src="./assets/img/location.svg" alt="" />
+                                    онлайн
+                                </div>
+                            </div>
+                            <div class="event__desc">
+                                дискуссионный клуб на канале АИМ «Боль в стопе»
+                            </div>
+                        </div>
+                        <div class="event">
+                            <div class="event__top">
+                                <div class="event__row">
+                                    <img src="./assets/img/calendar.svg" alt="" />
+                                    4 ноября, 17:00-19:00
+                                </div>
+                                <div class="event__row">
+                                    <img src="./assets/img/location.svg" alt="" />
+                                    онлайн
+                                </div>
+                            </div>
+                            <div class="event__desc">
+                                дискуссионный клуб на канале АИМ «Боль в стопе»
+                            </div>
+                        </div>
+                    </div>
+                    <button class="calendar__btn">Показать ещё</button>
+                </div>
+            </div>
+            <div class="webinar">
+                <div class="container">
+                    <div class="webinar__title">Популярные вебинары</div>
+                    <div class="webinar__inner">
+                        <div class="webinar__item">
+                            <div class="webinar__name">Дискуссионный клуб</div>
+                            <div class="webinar__desc">
+                                «Путь пациента с болью: лечение или обучение?»
+                            </div>
+                            <a href="" class="webinar__link">Смотреть</a>
+                        </div>
+                        <div class="webinar__item">
+                            <div class="webinar__name">Дискуссионный клуб</div>
+                            <div class="webinar__desc">
+                                «Путь пациента с болью: лечение или обучение?»
+                            </div>
+                            <a href="" class="webinar__link">Смотреть</a>
+                        </div>
+                        <div class="webinar__item">
+                            <div class="webinar__name">Дискуссионный клуб</div>
+                            <div class="webinar__desc">
+                                «Путь пациента с болью: лечение или обучение?»
+                            </div>
+                            <a href="" class="webinar__link">Смотреть</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="location">
+                <div class="container">
+                    <div class="location__title">Где были и будем</div>
+                    <div class="location__map">
+                        <img src="./assets/img/map.png" alt="" />
+                    </div>
+                    <div class="location__bottom">
+                        <div class="location__mark">Где мы были</div>
+                        <div class="location__mark location__mark--sec">Где мы будем</div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__inner">
+                    <div class="footer__info">
+                        <div class="footer__title">Контакты</div>
+                        <div class="footer__links">
+                            <a href="" class="footer__link">+7 916 073-32-23</a>
+                            <a href="" class="footer__link">@brandfactory.agency</a>
+                        </div>
+                        <form action="" class="footer__form">
+                            <input type="text" placeholder="Ваш телефон" />
+                            <input type="text" placeholder="Ваше имя" />
+                            <button class="footer__btn">Заказать</button>
+                        </form>
+                        <div class="social">
+                            <a href="" class="social__link">
+                                <div class="social__icon social__icon--inst"></div>
+                            </a>
+                            <a href="" class="social__link">
+                                <div class="social__icon social__icon--tg"></div>
+                            </a>
+                            <a href="" class="social__link">
+                                <div class="social__icon social__icon--whatsapp"></div>
+                            </a>
+                            <a href="" class="social__link">
+                                <div class="social__icon social__icon--youtube"></div>
+                            </a>
+                        </div>
+						<div class="footer__copyright">
+							© 2021. All right reserved
+						</div>
+                    </div>
+                    <img src="./assets/img/footer.png" alt="" class="footer__img"/>
+                </div>
+            </div>
+        </footer>
     </body>
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="./js/main.js"></script>

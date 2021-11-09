@@ -3,6 +3,15 @@
 $gold: #e9cc58;
 $gold-sec: #e9cc5b;
 
+@mixin masks {
+    mask-repeat: no-repeat !important;
+    -webkit-mask-repeat: no-repeat !important;
+    mask-position: center center !important;
+    -webkit-mask-position: center center !important;
+    mask-size: contain !important;
+    -webkit-mask-size: contain !important;
+}
+
 .container {
     max-width: 1232px;
     padding: 0 1rem;
@@ -13,6 +22,10 @@ $gold-sec: #e9cc5b;
 body {
     background: #171B29;
 	font-family: Museo, sans-serif;
+}
+
+main {
+	overflow: hidden;
 }
 
 .header {
@@ -80,11 +93,23 @@ body {
         display: flex;
         align-items: center;
         transition: 0.2s linear;
-        img {
-            margin-right: 20px;
-        }
+        
+		&-icon {
+			width: 17px;
+			height: 24px;
+			mask: url(../img/tel.svg);
+			-webkit-mask: url(../img/tel.svg);
+			@include masks;
+			background: $gold;
+			transition: .2s linear;
+			margin-right: 20px;
+		}
+
         &:hover {
             color: #fff;
+			.header__tel-icon {
+				background: #FFFFFF;
+			}
         }
     }
 }
@@ -183,6 +208,10 @@ body {
 .wedo {
 	padding-top: 174px;
 	padding-bottom: 90px;
+	background-image: url(../img/wave.svg);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: top left;
 	&__title {
 		margin-bottom: 92px;
 		font-weight: 250;
@@ -198,7 +227,7 @@ body {
 		row-gap: 75px;
 	}
 	&__item {
-		max-width: 350px;
+		max-width: 400px;
 		position: relative;
 		
 	}
@@ -232,6 +261,16 @@ body {
 .about {
 	padding-top: 90px;
 	padding-bottom: 90px;
+	background-image: url(../img/wave-2.svg);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: top 25px left;
+	position: relative;
+	&__logo {
+		position: absolute;
+		top: -90px;
+		left: 0;
+	}
 	&__inner {
 		margin-left: 179px;
 		display: flex;
@@ -266,6 +305,10 @@ body {
 
 .clients {
 	padding: 90px 0;
+	background-image: url(../img/waves.svg);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: bottom 25px left;
 	&__title {
 		margin-left: 179px;
 		font-weight: 250;
@@ -306,7 +349,6 @@ body {
 		line-height: 1;
 		font-weight: 400;
 		color: $gold;
-		display: block;
 		margin: 0 auto;
 		outline: none;
 		background: transparent;
@@ -324,7 +366,7 @@ body {
 		border: 2px solid $gold;
 	}
 	&__next::after, &__prev::after {
-		content: url(./img/arrow.svg);
+		content: url(../img/arrow.svg);
 		top: 50%;
 		left: 50%;
 		// transform: translate(-50%, -50%);
@@ -363,6 +405,10 @@ body {
 
 .calendar {
 	padding: 90px 0;
+	background-image: url(../img/waves-2.svg);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: bottom right;
 	&__title {
 		text-align: center;
 		font-weight: 250;
@@ -375,5 +421,295 @@ body {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		gap: 50px 146px;
+		margin-bottom: 100px;
+	}
+	&__btn {
+		padding-left: 100px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: 0 auto;
+		background: transparent;
+		border: none;
+		position: relative;
+		cursor: pointer;
+		font-weight: 300;
+		font-size: 1.25rem;
+		line-height: 1;
+		color: $gold;
+		&::before {
+			position: absolute;
+			content: "";
+			height: 2px;
+			width: 35%;
+			background: $gold;
+			top: 50%;
+			left: 0;
+			transform: translateY(-50%);
+		}
+	}
+}
+
+.event {
+	
+	&__top {
+		padding-bottom: 24px;
+		border-bottom: 2px solid $gold;
+		margin-bottom: 16px;
+	}
+	&__row {
+		display: flex;
+		align-items: center;
+		font-size: 1.5rem;
+		font-weight: 400;
+		color: #FFFFFF;
+		&:last-child {
+			margin-top: 16px;
+		}
+		img {
+			margin-right: 25px;
+		}
+	}
+	&__desc {
+		font-weight: 300;
+		font-size: 1.125rem;
+		line-height: 1.4;
+		color: #FFFFFF;
+	}
+}
+
+.webinar {
+	padding: 90px 0;
+	&__title {
+		margin-left: 179px;
+		font-weight: 250;
+		font-size: 3.75rem;
+		line-height: 1;
+		color: #FFFFFF;
+		margin-bottom: 105px;
+	}
+	&__inner {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 0;
+	}
+	&__item {
+		height: 468px;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		padding: 0 0 65px 45px;
+		background: url(../img/webinar.png) center/cover no-repeat;
+	}
+	&__name {
+		font-size: 1.5625rem;
+		margin-bottom: 12px;
+		color: #FFFFFF;
+		font-weight: 400;
+	}
+	&__desc {
+		font-size: 1.125rem;
+		font-weight: 400;
+		color: #FFFFFF;
+		margin-bottom: 60px;
+		line-height: 1.4;
+	}
+	&__link {
+		font-weight: 400;
+		font-size: 1.125rem;
+		color: $gold;
+		margin-left: 25px;
+		text-decoration: none;
+	}
+}
+
+.location {
+	padding: 90px 0;
+	&__title {
+		margin-left: 179px;
+		font-weight: 250;
+		font-size: 3.75rem;
+		line-height: 1;
+		color: #FFFFFF;
+		margin-bottom: 40px;
+	}
+	&__map {
+		width: 100%;
+		margin-bottom: 40px;
+	}
+	img {
+		width: 100%;
+	}
+	&__bottom {
+		margin-left: 179px;
+		display: flex;
+		align-items: center;
+		column-gap: 54px;
+	}
+	&__mark {
+		padding-left: 22px;
+		font-size: 1.125rem;
+		font-weight: 400;
+		color: #FFFFFF;
+		position: relative;
+		&::before {
+			position: absolute;
+			top: 50%;
+			left: 0;
+			content: "";
+			width: 10px;
+			height: 10px;
+			border-radius: 50%;
+			transform: translateY(-50%);
+			background: #A4A4A4;
+		}
+		&--sec::before {
+			background: $gold;
+		}
+	}
+}
+
+.footer {
+	background-image: url(../img/waves-3.svg);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: top left;
+	padding-top: 90px;
+	padding-bottom: 64px;
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		position: relative;
+	}
+	&__info {
+		display: flex;
+		flex-direction: column;
+		margin-left: 179px;
+		max-width: 467px;
+		margin-right: 20px;
+		width: 100%;
+	}
+	&__title {
+		font-weight: 250;
+		font-size: 3.75rem;
+		line-height: 1;
+		color: #FFFFFF;
+		margin-bottom: 100px;
+	}
+	&__links {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 70px;
+		row-gap: 28px;
+	}
+	&__link {
+		display: flex;
+		align-items: center;
+		color: #FFFFFF;
+		text-decoration: none;
+		font-size: 1.75rem;
+		line-height: 1;
+		font-weight: 400;
+	}
+	&__form {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 74px;
+		input {
+			border: none;
+			border-bottom: 2px solid #FFFFFF;
+			outline: none;
+			background: transparent;
+			color: #FFFFFF;
+			width: 100%;
+			font-size: 1.25rem;
+			line-height: 1.4;
+			font-weight: 300;
+			padding-bottom: 17px;
+			margin-bottom: 55px;
+			&::placeholder {
+				color: #FFFFFF;
+			}
+		}
+	}
+	&__btn {
+		width: 207px;
+		height: 56px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 30px;
+		border: 2px solid $gold;
+		font-size: 1.25rem;
+		line-height: 1;
+		font-weight: 400;
+		color: $gold;
+		outline: none;
+		background: transparent;
+		cursor: pointer;
+	}
+	&__copyright {
+		color: #7C7C7C;
+		font-weight: 400;
+		font-size: 1.25rem;
+		line-height: 1;
+	}
+	&__img {
+		position: absolute;
+		top: 0;
+		right: -100px;
+	}
+}
+
+.social {
+	display: flex;
+	column-gap: 15px;
+	margin-bottom: 115px;
+	&__link {
+		width: 47px;
+		height: 47px;
+		border-radius: 50%;
+		flex-shrink: 0;
+		border: 1px solid $gold;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: .2s linear;
+		
+		&:hover {
+			border-color: #FFFFFF;
+			.social__icon {
+				background: #FFFFFF
+			}
+		}
+	}
+	&__icon {
+		@include masks;
+		background: $gold;
+		transition: .2s linear;
+		&--inst {
+			mask: url(../img/inst.svg);
+			-webkit-mask: url(../img/inst.svg);
+			width: 22px;
+			height: 22px;
+		}
+		&--tg {
+			width: 20px;
+			height: 16px;
+			mask: url(../img/tg.svg);
+			-webkit-mask: url(../img/tg.svg);
+		}
+		&--whatsapp {
+			width: 21px;
+			height: 21px;
+			mask: url(../img/whats.svg);
+			-webkit-mask: url(../img/whats.svg);
+		}
+		&--youtube {
+			width: 24px;
+			height: 17px;
+			mask: url(../img/youtube.svg);
+			-webkit-mask: url(../img/youtube.svg);
+		}
 	}
 }
