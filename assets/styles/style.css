@@ -1361,6 +1361,7 @@ main {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  cursor: pointer;
 }
 
 @media (max-width: 576px) {
@@ -1929,6 +1930,8 @@ main {
   top: 0;
   right: calc(50% - 603px - 190px);
   border-radius: 50%;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 
 @media (max-width: 576px) {
@@ -1936,7 +1939,14 @@ main {
     position: inherit;
     right: auto;
     margin-bottom: 39px;
+    top: auto;
+    max-width: 100%;
   }
+}
+
+.animation {
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
 }
 
 .social {

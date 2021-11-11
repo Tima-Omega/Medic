@@ -945,6 +945,7 @@ main {
         border-radius: 50%;
         display: flex;
         justify-content: center;
+        cursor: pointer;
         @media (max-width: 576px) {
             width: 5px;
             height: 5px;
@@ -1337,12 +1338,19 @@ main {
         top: 0;
         right: calc(50% - 603px - 190px);
         border-radius: 50%;
+        flex-shrink: 0;
         @media (max-width: 576px) {
             position: inherit;
             right: auto;
             margin-bottom: 39px;
+            top: auto;
+            max-width: 100%;
         }
     }
+}
+
+.animation {
+    animation-duration: 2s;
 }
 
 .social {
